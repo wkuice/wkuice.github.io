@@ -67,7 +67,7 @@ transition-duration: 1s;
         <div class="col-md-4">
           <div class="card mb-4 shadow-sm">
             <div class="hop">
-            <a class="click_img" href="/img/1.jpg"><img class="bd-placeholder-img card-img-top" width="100" height="225" src="https://ifh.cc/g/3oW8cG.jpg" alt="맛집사진"></a>
+            <a javascript:openwindow('/img/1.jpg', 100,100 ><img class="bd-placeholder-img card-img-top" width="100" height="225" src="https://ifh.cc/g/3oW8cG.jpg" alt="맛집사진"></a>
             <div class="card-body">
                 <h3>원조밥사랑</h3>
             <p>가성비 집입니다. 기본으로 찌개가 나옵니다.</p>
@@ -439,7 +439,19 @@ transition-duration: 1s;
 
 </footer>
 	
-<script type="text/javascript"> var img = document.getElementsByClassName('click_img'); for (var x = 0; x < img.length; x++) { img.item(x).onclick=function() {window.open(this.src)}; } </script>
+<script LANGUAGE="Javascript">
+<!--
+function openwindow(opage, x, y) {
+farwindow = window.open('','Links','width='+x+', height='+y+', toolbar=0, scrollbars=0, resizable=no');
+if (farwindow != null) {
+if (farwindow.opener == null) {
+farwindow.opener = self;
+}
+farwindow.location.href = opage;
+}
+}
+//-->
+</script>
 
 
 	
